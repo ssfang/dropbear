@@ -1,0 +1,19 @@
+#!/usr/bin/sh
+
+#/system/bin/sh
+
+#x86架构
+#NDK=/cygdrive/d/Developer/ndk/android-ndk-r10c
+PLATFORM=$NDK/platforms/android-14/arch-x86/
+PREBUILT=$NDK/toolchains/x86-4.6/prebuilt
+PREFIX=~/module22
+CROSS_PREFIX=$PREBUILT/windows-x86_64/bin/i686-linux-android-
+
+./configure --prefix=$PREFIX --enable-static --disable-shared --enable-pic --disable-asm --disable-cli --host=x86-linux 
+#--build=$CROSS_PREFIX
+
+# --sysroot=$PLATFORM
+
+
+#make
+#make install
